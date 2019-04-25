@@ -1,39 +1,3 @@
-/*
-Template Name: Essentials
-Author URI: https://themeforest.net/user/epic-themes
-Author Name: Epic Themes
-Version: 1.0
-*/
-
-/* --- TABLE OF CONTENT
-
-01. GENERAL LAYOUT
-02. MENU-NAV
-03. FOOTER
-04. HOME
-05. TEAM
-06. FEATURES
-07. PRICING
-08. BLOG
-09. CONTACT
-10. OTHER ELEMENTS
-		a. Newsletter
-		b. Buttons
-		c. Gallery PopUp
-		d. Testimonials
-		e. Accordion Tabs
-		f. Carousel
-		g. Features List
-		h) Dropcaps Features
-		i) Partners
-		j) Testimonial Single
-11. MEDIA QUERIES
-
---- */
-
-/* ========================================================== */
-/* 			               01. GENERAL LAYOUT                 */
-/* ========================================================== */
 
 ul {
 	padding: 0;
@@ -49,7 +13,9 @@ ul, ol {
 	line-height:24px;
 	margin-bottom:20px;
 }
-	
+.mt-100{
+	margin-top: 100px;
+}
 ul li, ol li{
 	font-size: 17px;
 	line-height: 28px;
@@ -200,7 +166,7 @@ iframe {
 }
 
 .section-blue{
-	background-color: #1e90ff;
+	background-color: #0f1f52;
 	padding: 90px 0;
 }
 
@@ -234,6 +200,11 @@ iframe {
 
 .width-100{
 	width: 100%;
+}
+.width-150{
+	width: 250px !important;
+	height: 250px;
+	border-radius: 50%;
 }
 
 .box-shadow {
@@ -556,8 +527,8 @@ iframe {
 	overflow: hidden;
     display: block;
     margin-top: 30px;
-    padding: 60px 0 55px 0;
-    background-color: #1e90ff;
+    padding: 10px;
+    background-color: #0f1f52;
 }
 
 .footer p {
@@ -831,7 +802,12 @@ blockquote {
 ul.pricing-list{
 	padding: 0 55px;
 }
-
+.ll{
+	transition: all .5s;
+}
+.ll:hover{
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
 ul.pricing-list li.price-title{
 	font-size: 20px;
 	line-height: 24px;
@@ -839,11 +815,14 @@ ul.pricing-list li.price-title{
 	letter-spacing: 1px;
 	color: #071e55;
 }
-
+.price-title img{
+	width: 200px;
+	height: 150px;
+	box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);}
 ul.pricing-list li.price-value{
 	font-family: 'Dosis', sans-serif;
-	font-size: 70px;
-	line-height: 70px;
+	font-size: 30px;
+	line-height: 30px;
 	display: block;
 	margin-top:20px;
 	margin-bottom: 10px;
@@ -863,10 +842,24 @@ ul.pricing-list li.price-text{
 	display: block;
 	font-family: 'Open Sans', sans-serif;
 	text-align: left;
-	font-size: 16px;
-	line-height: 28px;
+	font-size: 13px;
+	line-height: 20px;
 	font-weight: 400;
 	margin-bottom: 5px;
+}
+
+ul.pricing-list li.price-text ul{
+	padding: 0 10px;
+}
+
+ul.pricing-list li.price-text ul li{
+	display: block;
+	font-family: 'Open Sans', sans-serif;
+	text-align: left;
+	font-size: 12px;
+	line-height: 15px;
+	font-weight: 100;
+	margin-bottom: 2px;
 }
 
 ul.pricing-list li.price-tag a{
@@ -1448,7 +1441,8 @@ a.btn-blue:visited, a.btn-blue:focus{
 }
 
 .testim-inner img{
-	max-width: 130px;
+	width: 130px;
+	height: 130px;
 	border:1px solid #efefef;
 	border-radius: 50% 50%;
 	padding: 5px 5px;
@@ -1555,6 +1549,7 @@ p.testimonial-single{
 .gallery-show {
     margin: 20px 0 40px 0;
     max-width: 100%;
+	height: 200px;
     border-radius: 8px 8px;
     border: 8px solid rgba(255, 255, 255, 0.8);
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
@@ -1689,10 +1684,16 @@ ul.partners-mentions li img:hover {
     .padding-top-120 {
 	    padding-top: 30px !important;
 	}
+	.mt-100{
+		margin-top: 50px;
+	}
 
 }
 
 @media (max-width: 375px) {
+	.mt-100{
+		margin-top: 0px;
+	}
 
 	.navbar-toggle {
 	    margin-bottom: 0;
